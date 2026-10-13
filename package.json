@@ -1,0 +1,14 @@
+{
+  "name": "nexus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NEXUS: Local-First AI-Native Workspace",
+  "scripts": {
+    "start": "run_local.bat",
+    "dev": "run_local.bat",
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev:api": "apps/api/.venv/Scripts/uvicorn app.main:app --port 8000 --app-dir apps/api --reload",
+    "seed": "apps/api/.venv/Scripts/python scripts/seed_data.py",
+    "build:web": "npm --prefix apps/web run build"
+  }
+}
